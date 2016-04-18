@@ -1,0 +1,80 @@
+<div class="lc-article-body">
+<h3>Предварительная настройка Git</h3>
+<p>Настройки Git производятся командой</p>
+<pre><code class="language-git">$ git config -[параметр]</code></pre>
+<p>Все параметры команды config можно просмотреть <a href="/show?TYPE=gitcommands&ID=126">здесь</a></p><br>
+<h4>Установка имени пользователя</h4>
+<p>При превоначальной установке Git в первую очередь указывается идентификатор пользователя и адрес электронной почты. Это необходимо по причине того, что Git вносит эту унформацию в кажый сделанный вами коммит.</p>
+<p>Установка имени пользователя в Git производится командой</p>
+<pre><code class="language-git">$ git config --global user.name "[Ваше имя]"</code></pre>
+<p>В моем случае комманда будет выглядеть так:</p>
+<pre><code class="language-git">$ git config --global user.name "Kirill Silianov"</code></pre><br>
+<h4>Установка адреса электронной почты</h4>
+<p>Установка адреса электронной почты в Git производится командой</p>
+<pre><code class="language-git">$ git config --global user.email [e-mail адрес]</code></pre>
+<p>В моем случае комманда будет выглядеть так:</p>
+<pre><code class="language-git">$ git config --global user.email admin@siada.ru</code></pre><br>
+<h4>Установка индивидуальных учетных данных для репозитория</h4>
+<p>После ввода идентификационной информации Git будет подписывать ею все действия пользователя. Если для конкретного репозитория необходимо использовать другие учетные данные, то необходимо передти в директорию проекта и выполнить команду без параметра "--global". Пример:</p>
+<pre>
+<code class="language-git">$ cd c:/projects/</code>
+<code class="language-git">$ git config user.name "Vasya Pupkin"</code>
+<code class="language-git">$ git config user.email info@siada.ru</code>
+</pre><br>
+<h4>Выбор текстового редактора для Git</h4>
+<p>Тектовый редакторв в Git используется в случае, если вам необходимо набрать какое либо сообщение. Если не определить этот параметр, Git будет использовать текстовый редактор по-умолчанию, установленный в системе. Для Windows это "Notepad", а для Linux "Vim" или "Emacs". Редактор по умолчанию устанавливается следующей командой:</p>
+<pre><code class="language-git">$ git config --global core.editor [имя редактора или "путь к исполняемому файлу редактора"]</code></pre>
+<p>Например:</p>
+<pre>
+<code class="language-git">$ git config --global core.editor vim</code>
+<code class="language-git">$ git config --global core.editor "C:\Program Files (x86)\Notepad++"</code>
+</pre>
+<h4>Выбор программы для сравнения текстовых файлов</h4>
+<p>Программа для сравнения файлов используется в тех случаях, когда требуется определить различия между версиями файлов или когда возникает конфликт слияния текстовых файлов. Для установки программы сравнения файлов исползуется параметр конфигурации "megre.tool [имя программы или "путь к исполняемому файлу программы"]". Пример комманды:</p>
+<pre>
+<code class="language-git">$ git config --global megre.tool kdiff3</code>
+<code class="language-git">$ git config --global core.editor "C:\Program Files (x86)\Diffuse\diffusew.exe"</code>
+</pre><br>
+<h4>Просмотр настроек Git</h4>
+<p>Для просмотра настроек Git используется команда конфигурации "--list". Например следующая команда:</p>
+<pre><code class="language-git">$ git config --list</code></pre>
+<p>Выведет весь список настроек</p>
+<pre>
+<code class="language-git">core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=manager
+filter.lfs.clean=git-lfs clean %f
+filter.lfs.smudge=git-lfs smudge %f
+filter.lfs.required=true
+user.name=Kirill Silianov
+user.email=admin@siada.org
+core.editor=C:\Program Files (x86)\Notepad++
+megre.tool=C:\Program Files (x86)\Diffuse\diffusew.exe
+</code>
+</pre>
+<p>Для получения значения определенного параметра необходимо указать параметр команды "config"</p>
+<pre><code class="language-git">$ git config --list user.name</code></pre>
+<p>Вернет:</p>
+<pre><code class="language-git">Kirill Silianov</code></pre>
+
+</div>
+<br>
+<hr>
+<h3>Задания</h3>
+<ol>
+<li>Просмотрите значения настроек до их изменения</li>
+<li>Установите имя пользователя в Git</li>
+<li>Установите адрес электронной почты в Git</li>
+<li>Укажите текстовый редактор, используемый по умолчанию в Git</li>
+<li>Ускажите инструмент для сравнения и слияния текстовых файлов</li>
+<li>Просмотрите значения настроек после изменения</li>
+</ol>

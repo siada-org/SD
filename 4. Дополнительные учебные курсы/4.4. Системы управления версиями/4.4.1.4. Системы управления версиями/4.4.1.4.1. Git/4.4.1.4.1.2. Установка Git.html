@@ -1,0 +1,178 @@
+<div class="lc-article-body">
+    <h3>Общие сведения</h3>
+    <p>Использовать Git можно различными способами. Для Git было создано множество графических интерфейсов, фронтэнодов
+        и прочих инструментов, упрощающих работу с Git. Эти инструменты будут рассмотрены в сответсвующих дополнительных
+        разделах, а в ходе данного курса, для управления и настройки Git будут использоваться консольные команды. Причин
+        этому много:</p>
+    <ul>
+        <li>консоль - единственный способ выполнения <strong>всех</strong> команд Git;</li>
+        <li>графические интерфейсы пользователя (GUI), в угоду простоте использования, имеют урезанный функционал;</li>
+        <li>GUI в сравнении с командной строкой гораздо ниже по производительности, что немаловажно при работе с
+            большими проектами;
+        </li>
+        <li>команды консоли унифицированы для всех версий Git и независимы от операционной системы, GUI же отличаются
+            друг от друга как по функциональности, так и по способу управлению ими;
+        </li>
+        <li>знание консольных команд позволяет понять механику работы Git и позволит без проблем использовать в
+            последствии любой GUI, посколько все GUI являются надстройками над консолью, интерпретирующими действия
+            пользователя в команды консоли;
+        </li>
+    </ul>
+    <h3>Установка Git</h3>
+    <p>Git доступен для абсолютного большинства операционных систем, но способы его установки для различных версий могут
+        отличаться</p>
+    <h4>Установка Git в Windows</h4>
+    <h5>Установка Git для Windows</h5>
+    <h6>Загрузка дистрибутива Git для Windows</h6>
+    <p>Наиболее простой способ установки Git на ОС Windows использовать Git для Windows, доступный по ссылке <a
+            href="https://git-scm.com/download/win">git-scm.com/download/win</a>, где имеются дистрибутивы да 32-х и
+        64-х разрядных операционных систем в виде как инсталяционных пакетов так и портативных версий программы</p>
+    <h5>Установка</h5>
+    <p>После загрузки и запуска дистрибутива откроется диалоговое окно установки Git.</p>
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Окно установки Git - информация о лицензии"
+                 src="/upload/medialibrary/59c/59c4e9b55f8bc5d3d279fcc081b75c7b.png"
+                 alt="Окно установки Git - информация о лицензии"><br>
+            2.1. Установка Git - информация о лицензии
+        </div>
+    </div>
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Установка Git - выбор пути установки"
+                 src="/upload/medialibrary/d2f/d2f909d84bce6ce8495ab840b28ca167.png"
+                 alt="Установка Git - выбор пути установки"><br>
+            2.2. Установка Git - выбор пути установки
+        </div>
+    </div>
+    <p>Первые два этапа стандартые для установки программ</p>
+    <p>На третьем этапе необходимо выбрать компоненты для установки:</p>
+    <ul>
+        <li><strong>additional icons</strong> - дополнительные иконки приложения и ярлыки рабочего стола;</li>
+        <li><strong>Windows Explorer integration</strong> - позволяет добавить два пункта к контекстному проводника:
+        </li>
+        <ul>
+            <li><strong>Git Bash Here</strong> - добавляет к контекстному меню пункт "Git Bash here" при выборе которого
+                открывается консоль с выбранной директорией
+            </li>
+            <li><strong>Git GUI Here</strong> - добавляет к контекстному меню пункт "Git GUI here" при выборе которого
+                запускается GUI Git с выбранной директорией
+            </li>
+        </ul>
+        <li><strong>Associate .git* configuration files with the default text</strong> - установить, используемый по
+            умолчанию в системе текстовый редактор в качестве текстового редактора по умолчанию в Git;
+        </li>
+        <li><strong>Associate .sh files to be run with Bash</strong> - ассоциировать файлы с расширением *.sh с консолью
+            "Bash";
+        </li>
+        <li><strong>Use a TrueType font in all console windows</strong> - использовать шрифты TrueType в консоли CMD;
+        </li>
+    </ul>
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Выбор компонентов для установки"
+                 src="/upload/medialibrary/de5/de55e38076ce54099d800a9bf63848ce.png"
+                 alt="Выбор компонентов для установки"><br>
+            2.3. Установка Git - выбор компонентов
+        </div>
+    </div>
+    <p>Следующим этапом следует выбор папки в меню "Пуск" в которой будут располагаться ярлыки Git.</p>
+
+    <p>Следующим пунктом установки будет выбор способа использования командной сторки Git. У нас есть выбор из трех
+        пунктов:</p>
+    <ul>
+        <li><strong>Use Git from Git Bash only</strong> - использовать только эмулятор Bash для управления Git;</li>
+        <li><strong>Use Git from the Windows Command Promt</strong> - использовать для работы с Git как Bash так и CMD;
+        </li>
+        <li><strong>Use Git and optional Unix tools from the Windows Command Promt</strong> - добавить возможность
+            использования в CMD некоторых инструментов консоли Unix (не рекомендуется);
+        </li>
+    </ul>
+
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Выбор способа использования командной строки в Git"
+                 src="/upload/medialibrary/e5e/e5e2de9ded3f9d18ec9b59c2979875b8.png"
+                 alt="Выбор способа использования командной строки в Git"><br>
+            2.4. Установка Git - выбор способа использования командной строки в Git
+        </div>
+    </div>
+
+    <p>Затем следует пункт обработки концов строк текста описания при commit или checkout. Для выбора доступно три
+        пункта:</p>
+    <ul>
+        <li><strong>Checkout Windows-style, commit Unix-style line ending</strong> - для checkout используются окончания
+            сторк как в Windows, а для коммитов используются окончания строк Unix;
+        </li>
+        <li><strong>Checkouts as-is, commit Unix-style line endings</strong> - окончания строк checkout спользуются "Как
+            есть", а строки commit переделываются в Unix-стиле;
+        </li>
+        <li><strong>Checkouts as-is, commit as-is</strong> - checkout строки используются "как есть", commit строки
+            используются "как есть";
+        </li>
+    </ul>
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Выбор способа окончания строк"
+                 src="/upload/medialibrary/198/19855ab7ca8fd860b4fe7a7f359fd698.png"
+                 alt="Выбор способа окончания строк"><br>
+            2.5. Установка Git - выбор способа окончания строк
+        </div>
+    </div>
+    <p>Следующий пункт - использования эмулятора bash. Данный этап имеет два пункта доступных для выбора:</p>
+
+    <ul>
+        <li><strong>Use MinTTY (The default terminal of MSYS2)</strong> - Использовать в качестве эмулятора Bash MinTTY;
+        </li>
+        <li><strong>Use Windows default console window</strong> - Использовать в качестве эмулятора Bash консоль
+            Windows;
+        </li>
+    </ul>
+
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <<img title="Выбор эмулятора терминала" src="/upload/medialibrary/8ac/8acc68de5dd6638f8262fcb39f3da101.png"
+                  alt="Выбор эмулятора терминала"><br>
+            2.6. Установка Git - Выбор эмулятора терминала
+        </div>
+    </div>
+
+    <p>Следующий пункт - выбор дополнительных опций установки</p>
+    <ul>
+        <li><strong>Enable file system caching </strong> - Разрешает кеширование файловой системы Git, позволяет
+            получить прирост производительности;
+        </li>
+        <li><strong>Enable Git Credential Manager</strong> - Разрешает использования диспечера учетных данных Windows
+            для сохранения учетных данных Git;
+        </li>
+
+    </ul>
+
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Дополнительные опции" src="/upload/medialibrary/229/229d6dbc28e975a1d178220ed822a7c0.png"
+                 alt="Дополнительные опции"><br>
+            2.7. Установка Git - дополнительные опции
+        </div>
+    </div>
+
+    <p>И окно завершения установки, позволяет после установки сразу запустить консоль Git и просмотреть описание релиза
+        данной версии Git </p>
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Окно завершения установки" src="/upload/medialibrary/d87/d87fd5a5ac2a791a311c5cc7bf5618e8.png"
+                 alt="Окно завершения установки"><br>
+            2.8. Установка Git - завершение установки
+        </div>
+    </div>
+    <h5>Установка GitHub для Windows</h5>
+    <p>Другим вариантом установки Git в операционной системе Windows является установка GitHub desktop для Windows. Данный пакет включает в себя как версию с коммандной строкой так и графический интерфейс пользователя. Помимо этого GitHub desktop включает в себя оснастку для работы с Git посредством консоли Powershell</p>
+    <p>Загрузка дистрибутива доступна по адресу <a href="https://desktop.github.com/">desktop.github.com</a>. При заргрузке скачивается файл маленького размера, который после запуска скачивает все необходимые данные с Интернета</p>
+    <div class="row article-image-area">
+        <div class="col-xs-12">
+            <img title="Окно завершения установки" src="/upload/medialibrary/d87/d87fd5a5ac2a791a311c5cc7bf5618e8.png"
+                 alt="Окно завершения установки"><br>
+            2.9. Установка GitHub - Получение файлов установки
+        </div>
+    </div>
+</div>
